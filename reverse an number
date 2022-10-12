@@ -1,0 +1,29 @@
+#include <stdio.h>
+int main(){
+    int Num, rev_Num = 0, remainder;
+    printf("Enter the number : ");
+    scanf("%d", &Num);    
+    while (Num != 0){
+        remainder = Num % 10;
+        rev_Num = rev_Num * 10 + remainder;
+        Num = Num/10;
+    }    
+    printf("The number : %d", rev_Num);
+    return 0;
+}
+
+TEST CASES
+Enter the number : -45721
+The number : -12754
+
+Enter the number : 000
+The number : 0
+
+Enter the number : AD1947
+invalid input
+
+Enter the number : !@#$%
+invalid input
+
+Enter the number : 145*999=144855
+invalid input
